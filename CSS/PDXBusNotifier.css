@@ -1,0 +1,40 @@
+/* Overlay */
+.mod-modal{
+	opacity: 0.3;
+	height: 100%;
+	width: 100%;	
+	background-color: #333;
+}
+
+#mod-overlay{
+	border-color: #0B90C4;
+	border-radius: 5px;
+	background-color: #57B7E2;
+	color: #FFF;	
+	
+	
+	text-align: center;
+	font-size: 20px;
+	
+	padding: 5px;
+	min-height: 50px;
+	min-width: 50px;		
+	position: relative;
+	bottom: 18em;
+	z-index: 10000;	
+}
+
+/* popup */
+.l-popup{
+	width: 300px !important;
+}
+.mod-arrivals ul{
+	list-style: none;
+}
+
+.mod-arrival-info{	
+}
+
+.mod-arrival-schedule{
+	color: #999999;	
+}

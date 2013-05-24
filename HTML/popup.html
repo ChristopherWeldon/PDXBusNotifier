@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+		<link rel="stylesheet" href="../CSS/PDXBusNotifier.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12 l-whitebackground l-popup">
+					<h3>Upcoming Arrivals:</h3>
+					<ul class="mod-arrivals" data-bind="foreach: arrivals, visible: arrivals().length > 0">
+						<li>
+							<ul class="mod-arrival-info">
+								<li data-bind="text: fullSign"></li>
+								<li data-bind="visible: estimated.length > 0">
+									Estimated: <span data-bind="text: estimatedToString"></span>
+								</li>
+								<li class="mod-arrival-schedule">Schedule: <span data-bind="text: scheduledToString"></span></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="span12">
+						<footer>
+							&nbsp;
+						</footer>
+					</div>
+				</div>
+			</div>
+			<script src="../JS/Libs/jquery-1.9.1.min.js"></script>
+			<script src="../JS/Libs/knockout-2.2.1.js"></script>
+			<script src="../JS/Libs/knockout-defaultIfNull.js"></script>
+			<script src="../JS/Src/app.js"></script>
+			<script src="../JS/Models/settings.js"></script>
+			<script src="../JS/Models/arrival.js"></script>
+			<script src="../JS/Views/popup.js"></script>
+	</body>
+</html>

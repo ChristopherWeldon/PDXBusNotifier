@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Settings</title>
+		<link rel="stylesheet" href="../CSS/jquery.timepicker.css" />
+		<link rel="stylesheet" href="../CSS/bootstrap.min.css" />
+		<link rel="stylesheet" href="../CSS/iphone_style_checkboxes.css" />
+		<link rel="stylesheet" href="../CSS/PDXBusNotifier.css" />
+		<script src="../JS/Libs/jquery-1.9.1.min.js"></script>
+		<script src="../JS/Libs/jquery.timepicker.min.js"></script>
+		<script src="../JS/Libs/iphone-style-checkboxes.js"></script>
+		<script src="../JS/Libs/knockout-2.2.1.js"></script>
+		<script src="../JS/Libs/jquery.timepicker.min.js"></script>
+		<script src="../JS/Libs/knockout-defaultIfNull.js"></script>				
+		<script src="../JS/Src/app.js"></script>
+		<script src="../JS/Models/settings.js"></script>
+		<script src="../JS/Views/settings.js"></script>		
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<header>
+						<h1>Settings:</h1>
+					</header>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12">	
+					<form>
+						<fieldset>
+							<legend>
+								Route
+							</legend>
+							<label for="stopID">Stop ID:  &nbsp;</label>
+							<input autofocus="autofocus" type="text" size="10" name="stopID" id="stopID" data-bind="value: formattedLocIDs" required />
+							<br />
+							<label for="route">Route:  &nbsp;</label>
+							<input type="text" size="10" name="route" id="route" data-bind="value: formattedRoutes" class="input" required />
+						</fieldset>
+						<fieldset>
+							<label for="startNotesTime">Minutes before notice:  &nbsp;</label>
+							<input type="number" size="2" name="notyTime" id="notyTime" data-bind="value: formattedNoteStartTime" required />
+							<legend class="sublegend">
+								Notfications
+							</legend>							
+							<label for="notiftEnable">Display notifications</label>							
+							<input type="checkbox" class="ios-style-checkbox" name="notiftEnable" id="notiftEnable" />							
+							<label for="notifyTime">Notifications Start Time</label>
+							<input type="text" size="2" name="notifyTime" id="notifyTime" data-bind="value: formattedStartTime" />
+							<label title="Set max number of notfications to be displayed for each arrival" for="maxnotes">Max Notifications: &nbsp;</label>
+							<input type="number" size="2" name="notifyMaxNotifications" id="notifyMaxNotifications" data-bind="value: maxNotes" required min="-1" max="100" />
+							<i>Set it -1 for unlimited notifications</i>
+							<label title="Set time (in Minutes) to stop notifications before arrival"  for="notifyStopNotesTime">Stop Notifications: &nbsp;</label>
+							<input type="number" size="2" name="notifyStopNotesTime" id="notifyStopNotesTime" data-bind="value: stopNotesTime" required min="0" max="100" />
+							<i>Set to 0 to keep reminders up to arrival time</i>
+						</fieldset>
+						<fieldset>
+							<input type="submit" name="submit" id="submit" class="btn btn-primary" value="Save Preference" />
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12">		
+					<footer>&nbsp;</footer>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

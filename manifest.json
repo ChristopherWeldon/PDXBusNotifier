@@ -1,0 +1,23 @@
+{  
+	"name": "Trimet Notifier",
+	"version": "0.5",
+	"manifest_version": 2,
+	"description": "Display Trimet arrival times in browser",
+	"icons": {
+		"128": "Images/App_Icon.png"
+	},	
+	"browser_action": {
+		"default_icon": "Images/popup_icon.png",
+		"default_popup": "HTML/popup.html"  
+	},		
+	"background": {
+		"page": "HTML/background.html"
+	},
+	"options_page": "HTML/settings.html",	
+	"content_security_policy": "default-src 'none'; script-src 'self' 'unsafe-eval'; connect-src http://developer.trimet.org/; style-src 'self' style-src 'self' 'unsafe-inline';",
+	"permissions": [
+		"idle",
+		"notifications",
+		"storage"
+	]
+}
