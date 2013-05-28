@@ -168,6 +168,9 @@ function SettingsModle() {
 		var settingsString = self.encodeDataFromLocal();
 
 		localStorage[self.localStorageSettings] = settingsString;
+		//Clear result set just in case:
+		var storeName = self.localStorageName;
+		window.localStorage.removeItem(storeName)
 
 	}
 	/**
