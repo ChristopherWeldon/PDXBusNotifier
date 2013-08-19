@@ -14,7 +14,7 @@ function App() {
 	 *  @returns int Seconds between dates
 	 */
 	this.calcDateDiff = function(d1, d2) {
-		// If the frist date is a string or number, create a date object based on the string
+		// If the first date is a string or number, create a date object based on the string
 		if ( typeof d1 === 'string' || typeof d1 === 'number') {
 			d1 = new Date(d1);
 		}
@@ -24,11 +24,11 @@ function App() {
 			d2 = new Date(d2);
 		}
 
-		// Convert dates to unix timestamp
+		// Convert dates to timestamp
 		var d1_milliseconds = d1.getTime();
 		var d2_milliseconds = d2.getTime();
 
-		// Calculate differenc and convert it to number of milliseconds between midnight of January 1, 1970
+		// Calculate difference and convert it to number of milliseconds between midnight of January 1, 1970
 		var diff = d1_milliseconds - d2_milliseconds;
 		diff = Math.round(diff / 1000);
 
@@ -217,8 +217,8 @@ function App() {
 	}
 	
 	/**
-	 * Verify the data in local storage is still relevent
-	 * @returns bool, true if data in local storage is still relevent
+	 * Verify the data in local storage is still relevant
+	 * @returns bool, true if data in local storage is still relevant
 	 */
 	this.isLocalStorageValid = function() {
 		var storeName = self.settings.localStorageName;
@@ -233,11 +233,11 @@ function App() {
 			localArrivalResultSet = JSON.parse(localArrivalResultSet);
 			var now = new Date();
 
-			// How much time has elasped since the last query to the server
+			// How much time has elapsed since the last query to the server
 			var queryTime = localArrivalResultSet.resultSet.queryTime;
 			var queryTimeDiff = self.calcDateDiff(now, queryTime);
 
-			// How much time (if any) has elasped since the first arrival was due for the last arrival result set
+			// How much time (if any) has elapsed since the first arrival was due for the last arrival result set
 			var firstArrival = self.getEarliestItem(localArrivalResultSet.resultSet.arrival);			
 			// Check the status so we know what time to compare to
 			var firstArrivalTime;

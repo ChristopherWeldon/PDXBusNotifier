@@ -130,7 +130,7 @@ function Badge() {
 	}
 
 	/**
-	 * Get earilest arrival time
+	 * Get earliest arrival time
 	 */
 	this.getArrival = function() {
 		var resultSet = self.app.getData();

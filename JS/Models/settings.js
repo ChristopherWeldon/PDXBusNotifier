@@ -20,7 +20,7 @@ function SettingsModle() {
 
 	//What routes are we tracking:
 	this.routes = ko.observable().extend({
-		defaultIfNull : "8,61"
+		defaultIfNull : "68,61"
 	});
 
 	//Time to start displaying notifications
