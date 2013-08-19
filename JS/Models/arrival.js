@@ -7,7 +7,7 @@ function Arrival(data) {
     this.estimatedToString = ko.computed({
         read : function() {
             var d =  new Date(this.estimated())
-            return d.toLocaleDateString();
+            return d.toLocaleDateString() + " " + d.toLocaleTimeString();
         },
         write : function(value) {
             //display to screen
@@ -24,7 +24,7 @@ function Arrival(data) {
     this.scheduledToString = ko.computed({
         read : function() {
             var d =  new Date(this.scheduled())
-            return d.toLocaleDateString();
+            return d.toLocaleDateString() + " " + d.toLocaleTimeString();
         },
         write : function(value) {
             //display to screen
