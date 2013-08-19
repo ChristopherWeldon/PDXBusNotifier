@@ -152,7 +152,7 @@ function SettingsModle() {
 	 */
 	this.getLocalSettings = function() {
 		var settingsJSONString = localStorage[self.localStorageSettings];
-		// If there is a string in the localsettings, convert it to a JSON object and restore the settings
+		// If there is a string in the local settings, convert it to a JSON object and restore the settings
 		if ( typeof settingsJSONString != 'undefined') {
 			var jsonObj = JSON.parse(settingsJSONString);			
 			self.restoreFromLocal(jsonObj);
@@ -170,7 +170,7 @@ function SettingsModle() {
 		localStorage[self.localStorageSettings] = settingsString;
 		//Clear result set just in case:
 		var storeName = self.localStorageName;
-		window.localStorage.removeItem(storeName)
+		localStorage.removeItem(storeName)
 
 	}
 	/**
