@@ -166,12 +166,12 @@ function SettingsModle() {
 	 */
 	this.putDataInLocal = function() {
 		var settingsString = self.encodeDataFromLocal();
-
-		localStorage[self.localStorageSettings] = settingsString;
+				
 		//Clear result set just in case:
 		var storeName = self.localStorageName;
 		localStorage.removeItem(storeName)
-
+		
+		localStorage[self.localStorageSettings] = settingsString;
 	}
 	/**
 	 * Restore settings for the local storage
