@@ -52,7 +52,7 @@ function App() {
 		}
 
 		return displayTime;
-	}	
+	};
 
 	/**
 	* Filter only results the use wants based on route settings

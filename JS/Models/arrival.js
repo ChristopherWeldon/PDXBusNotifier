@@ -33,6 +33,25 @@ function Arrival(data) {
         owner : this        
     });	
     
+    
+    /**
+     * Use moment JS to make an "arrives in " message. 
+     */    
+    this.timeToArrival = ko.computed({
+        read : function() {
+            var arrivalTime;               
+            if (this.estimated() === undefined){
+                arrivalTime = moment(this.scheduled());
+             }
+             else{
+                arrivalTime = moment(this.estimated());
+             }
+            return moment(arrivalTime).fromNow();   
+        },
+        owner : this        
+    }); 
+        
+    
 	// The short version of text from the overhead sign of the vehicle when it arrives at the stop.
 	this.shortSign = ko.observable(data.shortSign);
 

@@ -35,6 +35,8 @@
 .mod-arrival-info{	
 }
 
-.mod-arrival-schedule{
+.mod-arrival-schedule,
+.mod-arrival-arrivesinmessage{
 	color: #999999;	
+	font-size: .9em;
 }

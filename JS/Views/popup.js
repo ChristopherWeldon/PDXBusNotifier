@@ -22,8 +22,7 @@ function PopupViewModel() {
 		}
 		else{	
 		}
-	}
-	
+	};
 	self.displayArrivals();
 }
 

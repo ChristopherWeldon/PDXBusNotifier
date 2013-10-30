@@ -18,6 +18,7 @@
 									Estimated: <span data-bind="text: estimatedToString"></span>
 								</li>
 								<li class="mod-arrival-schedule">Schedule: <span data-bind="text: scheduledToString"></span></li>
+								<li class="mod-arrival-schedule">Arrives <span data-bind="text: timeToArrival"></span></li>
 							</ul>
 						</li>
 					</ul>
@@ -35,9 +36,10 @@
 			<script src="../JS/Libs/jquery-1.9.1.min.js"></script>
 			<script src="../JS/Libs/knockout-2.2.1.js"></script>
 			<script src="../JS/Libs/knockout-defaultIfNull.js"></script>
+			<script src="../JS/Libs/moment.min.js"></script>
 			<script src="../JS/Src/app.js"></script>
 			<script src="../JS/Models/settings.js"></script>
-			<script src="../JS/Models/arrival.js"></script>
+			<script src="../JS/Models/arrival.js"></script>			
 			<script src="../JS/Views/popup.js"></script>
 	</body>
 </html>
